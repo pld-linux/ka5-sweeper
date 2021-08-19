@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		sweeper
 Summary:	sweeper
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e22587bd3683768b778b3395879c5d08
+# Source0-md5:	b1442f8b5bd17ac0af586bcc304dd158
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
