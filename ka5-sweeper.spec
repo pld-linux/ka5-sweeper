@@ -1,40 +1,40 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	24.01.95
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		sweeper
 Summary:	sweeper
 Name:		ka5-%{kaname}
-Version:	23.08.4
-Release:	1
+Version:	24.01.95
+Release:	0.1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8210c9cb71a083ff2a1c2b7a254caeef
+Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	baf4afe28b06d2698ba29b040a2f1a1f
 URL:		http://www.kde.org/
-BuildRequires:	Qt5Core-devel
-BuildRequires:	Qt5Core-devel >= %{qtver}
-BuildRequires:	Qt5DBus-devel
-BuildRequires:	Qt5Gui-devel >= 5.11.1
-BuildRequires:	Qt5Widgets-devel
+BuildRequires:	Qt6Core-devel
+BuildRequires:	Qt6Core-devel >= %{qtver}
+BuildRequires:	Qt6DBus-devel
+BuildRequires:	Qt6Gui-devel >= 5.11.1
+BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf5-kactivities-stats-devel >= %{kframever}
-BuildRequires:	kf5-kbookmarks-devel >= %{kframever}
-BuildRequires:	kf5-kconfig-devel >= %{kframever}
-BuildRequires:	kf5-kconfigwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kcoreaddons-devel >= %{kframever}
-BuildRequires:	kf5-kcrash-devel >= %{kframever}
-BuildRequires:	kf5-kdoctools-devel >= %{kframever}
-BuildRequires:	kf5-ki18n-devel >= %{kframever}
-BuildRequires:	kf5-kio-devel >= %{kframever}
-BuildRequires:	kf5-ktextwidgets-devel >= %{kframever}
-BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
+BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kp5-plasma-activities-stats-devel
+BuildRequires:	kf6-kbookmarks-devel >= %{kframever}
+BuildRequires:	kf6-kconfig-devel >= %{kframever}
+BuildRequires:	kf6-kconfigwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
+BuildRequires:	kf6-kcrash-devel >= %{kframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kframever}
+BuildRequires:	kf6-ki18n-devel >= %{kframever}
+BuildRequires:	kf6-kio-devel >= %{kframever}
+BuildRequires:	kf6-ktextwidgets-devel >= %{kframever}
+BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt5-build >= %{qtver}
+BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -88,6 +88,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/sweeper
 %{_desktopdir}/org.kde.sweeper.desktop
 %{_datadir}/dbus-1/interfaces/org.kde.sweeper.xml
-%{_datadir}/kxmlgui5/sweeper
 %{_datadir}/metainfo/org.kde.sweeper.appdata.xml
-%{_datadir}/qlogging-categories5/sweeper.categories
+%{_datadir}/qlogging-categories6/sweeper.categories
